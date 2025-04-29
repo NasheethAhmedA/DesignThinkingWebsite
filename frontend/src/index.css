@@ -1,3 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Hide vertical scrollbar */
+::-webkit-scrollbar { display: none; }

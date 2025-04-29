@@ -50,10 +50,10 @@ const quickLinks = [
     link: '/about'
   },
   {
-    title: 'Resources',
-    description: 'Access free design thinking resources and materials.',
+    title: 'Projects',
+    description: 'Explore our past and ongoing projects.',
     icon: <BookOpen className="h-8 w-8 text-purple-500" />,
-    link: '/about'
+    link: '/showcase'
   }
 ];
 
@@ -109,7 +109,7 @@ const Home: React.FC = () => {
 
       <section className="py-16 bg-blue-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Join Our Community?</h2>
+          <h2 className="text-3xl font-bold mb-6">Ready to Join Our Club?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Become a part of our creative community and start your journey in design thinking today.
           </p>

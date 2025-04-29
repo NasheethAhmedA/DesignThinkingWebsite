@@ -6,6 +6,7 @@ import About from './pages/About';
 import Events from './pages/Events';
 import Contact from './pages/Contact';
 import JoinUs from './pages/JoinUs';
+import Showcase from './pages/Showcase';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="events" element={<Events />} />
           <Route path="contact" element={<Contact />} />
           <Route path="join-us" element={<JoinUs />} />
+          <Route path="showcase" element={<Showcase />} />
         </Route>
       </Routes>
     </Router>

@@ -2,23 +2,21 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { GraduationCap } from 'lucide-react';
 
 const MasterLayout: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="bg-white shadow-md">
-        <div className="container mx-auto px-4 py-6 flex justify-between items-center">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center">
-              <GraduationCap className="h-10 w-10 text-blue-600" />
-              <span className="ml-2 text-2xl font-bold text-blue-800">Design Thinking Club</span>
+        <div className="container mx-auto px-4 py-6 flex justify-around items-center">
+        <div className="flex items-center hidden md:flex">
+              <img src="./././assets/DesignThinkingLogo.png" alt="Logo" className="h-24 w-24" />
             </div>
-          </div>
+            <div className="flex flex-col items-center">
+            <span className="text-5xl font-bold text-blue-800 text-center">Design Thinking Club</span>
+            <span className="text-3xl font-bold text-blue-800 text-center hidden md:block">Kingston Engineering College</span>
+            </div>
           <div className="hidden md:block">
-            <div className="h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center">
-              <span className="text-sm font-semibold text-gray-700">UNI</span>
-            </div>
+          <img src="./././assets/kingston_logo.png" alt="Logo" className="h-24" />
           </div>
         </div>
         <Navbar />

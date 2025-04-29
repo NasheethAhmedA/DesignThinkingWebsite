@@ -41,7 +41,7 @@ const Carousel: React.FC<CarouselProps> = ({
   if (!slides.length) return null;
 
   return (
-    <div className="relative w-full overflow-hidden rounded-lg">
+    <div className="relative w-full overflow-hidden lg:rounded-xl md:rounded-0">
       <div 
         className="flex transition-transform duration-500 ease-in-out"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}

@@ -7,23 +7,27 @@ This project is a modular and scalable website for the "Design Thinking Club", b
 ```
 design-thinking-club/
 ├── backend/           # Empty folder for future backend implementation
-├── public/
-├── src/
-│   ├── components/    # Reusable components
-│   │   ├── Navbar.tsx
-│   │   ├── Footer.tsx
-│   │   ├── Carousel.tsx
-│   ├── layouts/       
-│   │   └── MasterLayout.tsx  # Main layout structure
-│   ├── pages/         # Individual page components
-│   │   ├── Home.tsx
-│   │   ├── About.tsx
-│   │   ├── Events.tsx
-│   │   ├── Contact.tsx
-│   │   └── JoinUs.tsx
-│   ├── App.tsx        # Main app component with routing
-│   ├── main.tsx       # Entry point
-├── package.json
+├── frontend/
+│   ├── assets/
+│   ├── src/
+│   │   ├── components/    # Reusable components
+│   │   │   ├── Navbar.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── Carousel.tsx
+│   │   ├── layouts/       
+│   │   │   └── MasterLayout.tsx  # Main layout structure
+│   │   ├── pages/         # Individual page components
+│   │   │   ├── Home.tsx
+│   │   │   ├── About.tsx
+│   │   │   ├── Events.tsx
+│   │   │   ├── Contact.tsx
+│   │   │   ├── Showcase.tsx
+│   │   │   └── JoinUs.tsx
+│   │   ├── App.tsx        # Main app component with routing
+│   │   ├── main.tsx       # Entry point
+│   ├── package.json
+│   ├── index.html
+├── .gitignore
 └── README.md
 ```
 
@@ -38,7 +42,7 @@ design-thinking-club/
 
 ## Getting Started
 
-1. Clone the repository
+1. Clone the repository to your local machine with the correct branch. { use Github Desktop }
 2. if node.js is not installed then install it through [here](https://nodejs.org/en/download)
 3. Install dependencies:
    ```
