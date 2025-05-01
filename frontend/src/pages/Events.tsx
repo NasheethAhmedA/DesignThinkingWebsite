@@ -17,58 +17,40 @@ interface Event {
 const upcomingEvents: Event[] = [
   {
     id: 1,
-    title: 'Design Thinking Workshop',
-    date: 'June 15, 2025',
-    time: '2:00 PM - 5:00 PM',
-    location: 'Innovation Lab, Building 3',
-    description: 'Learn the fundamentals of design thinking methodology and apply it to solve real-world problems.',
-    image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    registrationLink: '#'
-  },
-  {
-    id: 2,
-    title: 'Guest Speaker: Innovation in Healthcare',
-    date: 'June 25, 2025',
-    time: '3:30 PM - 5:00 PM',
-    location: 'Auditorium A, Main Campus',
-    description: 'Join us for an inspiring talk by Dr. Emily Chen on how design thinking is transforming healthcare.',
-    image: 'https://images.pexels.com/photos/7176026/pexels-photo-7176026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    registrationLink: '#'
-  },
-  {
-    id: 3,
-    title: 'Innovation Challenge Kickoff',
-    date: 'July 5, 2025',
-    time: '10:00 AM - 12:00 PM',
-    location: 'Conference Hall, Student Center',
-    description: 'The official launch of our annual innovation challenge. Learn about this year\'s theme and form your teams.',
-    image: 'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    registrationLink: '#'
+    title: 'Smart Campus Hackathon - SCH 2025',
+    date: 'May 10, 2025',
+    time: '9:00 AM - 6:00 PM',
+    location: 'Anna Hall',
+    description: 'Join fellow innovators in solving real campus challenges using tech in this all-day Smart Campus Hackathon.',
+    image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    registrationLink: 'https://docs.google.com/forms/d/e/1FAIpQLSeyVXm1aQ3k_ZR_Di88HZ6Uu8jyoTq3i4F33NHauE-Mh9_1kg/viewform?usp=dialog'
   }
+  
 ];
 
 const pastEvents: Event[] = [
   {
-    id: 4,
-    title: 'Design Sprint Masterclass',
-    date: 'May 10, 2025',
-    time: '9:00 AM - 4:00 PM',
-    location: 'Innovation Lab, Building 3',
-    description: 'A full-day masterclass on running effective design sprints to accelerate product development.',
-    image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    id: 2,
+    title: 'Hands-on Project: Powered Python',
+    date: 'March 25, 2025',
+    time: '10:00 AM - 12:30 PM',
+    location: 'AI Lab, Library Block',
+    description: 'Get hands-on experience building real-world applications using Python in this interactive project session.',
+    image: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     past: true
   },
   {
-    id: 5,
-    title: 'Prototyping Workshop',
-    date: 'April 25, 2025',
-    time: '1:00 PM - 4:00 PM',
-    location: 'Makerspace, Engineering Building',
-    description: 'Hands-on workshop focusing on rapid prototyping techniques for product design.',
-    image: 'https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    id: 3,
+    title: 'The Mic is Yours',
+    date: 'April 12, 2025',
+    time: '1:30 PM - 4:00 PM',
+    location: 'Anna Hall',
+    description: 'An open stage event for sharing stories, ideas, and innovation journeys — your mic, your voice.',
+    image: 'https://images.pexels.com/photos/4652276/pexels-photo-4652276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     past: true
   }
 ];
+
 
 const EventCard: React.FC<{ event: Event }> = ({ event }) => {
   return (
