@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, Calendar, Users, Lightbulb, Award } from 'lucide-react';
+import { Calendar, Users, Lightbulb, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface BenefitProps {
