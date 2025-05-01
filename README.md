@@ -44,11 +44,15 @@ design-thinking-club/
 
 1. Clone the repository to your local machine with the correct branch. { use Github Desktop }
 2. if node.js is not installed then install it through [here](https://nodejs.org/en/download)
-3. Install dependencies:
+3. Navigate to the `frontend` directory:
+   ```
+   cd frontend
+   ```
+4. Install dependencies:
    ```
    npm install
    ```
-4. Start the development server:
+5. Start the development server:
    ```
    npm run dev
    ```
