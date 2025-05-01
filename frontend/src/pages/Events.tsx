@@ -1,5 +1,6 @@
 import React from 'react';
 import { Calendar, Clock, MapPin, ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Event {
   id: number;
@@ -157,12 +158,12 @@ const Events: React.FC = () => {
           <p className="text-lg max-w-3xl mx-auto mb-8">
             If you have an idea for an event related to design thinking or innovation, we'd love to hear from you.
           </p>
-          <a 
-            href="/contact" 
+          <Link 
+            to="/contact" 
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-md transition-colors"
           >
             Contact Us
-          </a>
+          </Link>
         </div>
       </section>
     </div>

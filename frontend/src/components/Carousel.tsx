@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Slide {
   id: number;
@@ -57,12 +58,12 @@ const Carousel: React.FC<CarouselProps> = ({
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">{slide.title}</h2>
                 <p className="text-lg md:text-xl mb-6 max-w-2xl">{slide.description}</p>
                 {slide.buttonText && slide.buttonLink && (
-                  <a 
-                    href={slide.buttonLink}
+                    <Link 
+                    to={slide.buttonLink}
                     className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-md transition-colors"
-                  >
+                    >
                     {slide.buttonText}
-                  </a>
+                    </Link>
                 )}
               </div>
             </div>
