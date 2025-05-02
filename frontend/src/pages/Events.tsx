@@ -45,7 +45,7 @@ const pastEvents: Event[] = [
     date: 'April 12, 2025',
     time: '1:30 PM - 4:00 PM',
     location: 'Anna Hall',
-    description: 'An open stage event for sharing stories, ideas, and innovation journeys based on topic provided— your mic, your voice.',
+    description: 'An open stage event for sharing stories, ideas, and innovation journeys — your mic, your voice.',
     image: 'https://images.pexels.com/photos/4652276/pexels-photo-4652276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     past: true
   }
