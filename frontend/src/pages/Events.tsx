@@ -1,7 +1,7 @@
 import React from 'react';
 import { Calendar, Clock, MapPin, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import {event_id_1} from '../images';
+import {event_id_1, event_id_2} from '../images';
 
 interface Event {
   id: number;
@@ -17,7 +17,7 @@ interface Event {
 
 const upcomingEvents: Event[] = [
   {
-    id: 1,
+    id: 0,
     title: 'Design Thinking Workshop',
     date: 'June 15, 2025',
     time: '2:00 PM - 5:00 PM',
@@ -27,7 +27,7 @@ const upcomingEvents: Event[] = [
     registrationLink: '#'
   },
   {
-    id: 2,
+    id: 0,
     title: 'Guest Speaker: Innovation in Healthcare',
     date: 'June 25, 2025',
     time: '3:30 PM - 5:00 PM',
@@ -37,7 +37,7 @@ const upcomingEvents: Event[] = [
     registrationLink: '#'
   },
   {
-    id: 3,
+    id: 0,
     title: 'Innovation Challenge Kickoff',
     date: 'July 5, 2025',
     time: '10:00 AM - 12:00 PM',
@@ -51,22 +51,22 @@ const upcomingEvents: Event[] = [
 const pastEvents: Event[] = [
   {
     id: 2,
-    title: 'Hands-on Project: Powered Python',
+    title: 'The Mic is Yours!',
+    date: 'April 12, 2025',
+    time: '1:30 PM - 4:00 PM',
+    location: 'Anna Hall, Main Block',
+    description: 'A communication platform for students to experience public speaking with Mic in their hands.',
+    image: event_id_2,
+    past: true
+  },
+  {
+    id: 1,
+    title: 'Hands-on: Project Powered Python',
     date: 'March 25, 2025',
     time: '10:00 AM - 12:30 PM',
     location: 'AI Lab, Library Block',
     description: 'Get hands-on experience building real-world applications using Python in this interactive project session.',
     image: event_id_1,
-    past: true
-  },
-  {
-    id: 5,
-    title: 'Prototyping Workshop',
-    date: 'April 25, 2025',
-    time: '1:00 PM - 4:00 PM',
-    location: 'Makerspace, Engineering Building',
-    description: 'Hands-on workshop focusing on rapid prototyping techniques for product design.',
-    image: 'https://images.pexels.com/photos/3153198/pexels-photo-3153198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     past: true
   }
 ];
