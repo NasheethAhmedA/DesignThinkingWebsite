@@ -1,6 +1,7 @@
 import React from 'react';
 import { Calendar, Clock, MapPin, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import {event_id_1} from '../images';
 
 interface Event {
   id: number;
@@ -55,7 +56,7 @@ const pastEvents: Event[] = [
     time: '10:00 AM - 12:30 PM',
     location: 'AI Lab, Library Block',
     description: 'Get hands-on experience building real-world applications using Python in this interactive project session.',
-    image: 'event1.jpeg',
+    image: event_id_1,
     past: true
   },
   {

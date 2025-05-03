@@ -2,8 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import DesignThinkingLogo from '/assets/DesignThinkingLogo.png';
-import KingstonLogo from '/assets/kingston_logo.png';
+import { DesignThinkingLogo, KingstonLogo } from '../images';
 
 const MasterLayout: React.FC = () => {
   return (
