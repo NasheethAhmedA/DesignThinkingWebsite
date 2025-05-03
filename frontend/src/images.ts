@@ -10,4 +10,8 @@
 export {default as DesignThinkingLogo} from '/assets/DesignThinkingLogo.png';
 export {default as KingstonLogo} from '/assets/kingston_logo.png';
 export {default as event_id_1} from '/assets/event_id_1.jpeg';
+export {default as event_id_1_gallery1} from '/assets/event_id_1_gallery1.jpeg';
+export {default as event_id_1_gallery2} from '/assets/event_id_1_gallery2.jpeg';
 export {default as event_id_2} from '/assets/event_id_2.jpeg';
+export {default as event_id_2_gallery1} from '/assets/event_id_2_gallery1.jpeg';
+export {default as event_id_2_gallery2} from '/assets/event_id_2_gallery2.jpeg';
