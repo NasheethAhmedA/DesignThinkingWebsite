@@ -49,13 +49,13 @@ const upcomingEvents: Event[] = [
 
 const pastEvents: Event[] = [
   {
-    id: 4,
-    title: 'Design Sprint Masterclass',
-    date: 'May 10, 2025',
-    time: '9:00 AM - 4:00 PM',
-    location: 'Innovation Lab, Building 3',
-    description: 'A full-day masterclass on running effective design sprints to accelerate product development.',
-    image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    id: 2,
+    title: 'Hands-on Project: Powered Python',
+    date: 'March 25, 2025',
+    time: '10:00 AM - 12:30 PM',
+    location: 'AI Lab, Library Block',
+    description: 'Get hands-on experience building real-world applications using Python in this interactive project session.',
+    image: 'event1.jpeg',
     past: true
   },
   {
