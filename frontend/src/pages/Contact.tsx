@@ -1,15 +1,8 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Linkedin } from 'lucide-react';
 
-interface ContactFormData {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
-
-const Contact: React.FC = () => {
-  const [formData, setFormData] = useState<ContactFormData>({
+const Contact = () => {
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
@@ -26,63 +19,87 @@ const Contact: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send the form data to a server here
-    console.log('Form submitted:', formData);
-    setFormSubmitted(true);
-    // Reset form after submission
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setFormSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        alert('Failed to send message.');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('Something went wrong.');
+    }
   };
 
   return (
-    <div>
-      <section className="py-20 bg-blue-700 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
-          <p className="text-xl max-w-3xl mx-auto">
-            Have questions or want to get involved? We'd love to hear from you.
+    <section className="bg-white">
+      {/* Blue Header */}
+      <div className="bg-blue-700 text-white py-10 text-center">
+        <h2 className="text-4xl font-bold">Contact Us</h2>
+        <p className="mt-2 text-md">Have questions or want to get involved? We'd love to hear from you.</p>
+      </div>
+
+      {/* Contact Info */}
+      <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-12 px-6">
+        <div className="bg-white shadow-md rounded-lg p-6 text-center">
+          <Mail className="mx-auto text-blue-600 mb-2" size={32} />
+          <h4 className="font-semibold">Email</h4>
+          <a href="mailto:<kannamal.engineering@kingston.ac>" className="text-gray-600 text-sm">kannamal.engineering@kingston.ac</a>
+        </div>
+        <div className="bg-white shadow-md rounded-lg p-6 text-center">
+          <Linkedin className="mx-auto text-blue-600 mb-2" size={32} />
+          <h4 className="font-semibold">LinkedIn</h4>
+          <a
+            href="https://www.linkedin.com/company/design-thinking-club-kingston/"
+            className="text-blue-600 text-sm hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Design Thinking Club
+          </a>
+        </div>
+        <div className="bg-white shadow-md rounded-lg p-6 text-center">
+          <MapPin className="mx-auto text-blue-600 mb-2" size={32} />
+          <h4 className="font-semibold">Location</h4>
+          <p className="text-gray-600 text-sm">
+            Kingston Engineering College<br />Vellore
           </p>
         </div>
-      </section>
+      </div>
 
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                <div className="bg-blue-100 p-4 rounded-full mb-4">
-                  <Mail className="h-6 w-6 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Email</h3>
-                <a href="mailto:designthinking@university.edu" className="text-blue-600 hover:text-blue-800 transition-colors">
-                  designthinking@university.edu
-                </a>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                <div className="bg-blue-100 p-4 rounded-full mb-4">
-                  <Phone className="h-6 w-6 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Phone</h3>
-                <a href="tel:+1234567890" className="text-blue-600 hover:text-blue-800 transition-colors">
-                  (123) 456-7890
-                </a>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
-                <div className="bg-blue-100 p-4 rounded-full mb-4">
-                  <MapPin className="h-6 w-6 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">Location</h3>
-                <p>University Campus, Building 3</p>
-                <p>Room 201</p>
-              </div>
+      {/* Form Section */}
+      <div className="max-w-4xl mx-auto mt-12 px-6 mb-20">
+        <div className="bg-white shadow-md rounded-lg p-8">
+          <h3 className="text-xl font-semibold mb-6">Send Us a Message</h3>
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <div className="grid md:grid-cols-2 gap-4">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="border border-gray-300 rounded-md p-3 w-full"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="border border-gray-300 rounded-md p-3 w-full"
+              />
             </div>
 
             <div id="SendMSG" className="bg-white p-8 rounded-lg shadow-md">
@@ -164,42 +181,37 @@ const Contact: React.FC = () => {
               </form>
             </div>
           </div>
+            <select
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              required
+              className="border border-gray-300 rounded-md p-3 w-full"
+            >
+              <option value="">Please select</option>
+              <option value="General Inquiry">General Inquiry</option>
+              <option value="Partnership">Partnership</option>
+              <option value="Feedback">Feedback</option>
+            </select>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Message"
+              required
+              className="border border-gray-300 rounded-md p-3 w-full h-32"
+            ></textarea>
+            <button
+              type="submit"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md"
+            >
+              Send Message
+            </button>
+            {formSubmitted && <p className="text-green-500 mt-2">Message sent successfully!</p>}
+          </form>
         </div>
-      </section>
-
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Club Hours</h2>
-          <p className="text-lg max-w-3xl mx-auto mb-8">
-            Our club office is open during the following hours. Feel free to stop by!
-          </p>
-          <div className="max-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden">
-            <div className="p-6">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-left">
-                  <p className="font-semibold">Monday - Thursday</p>
-                </div>
-                <div className="text-right">
-                  <p>10:00 AM - 4:00 PM</p>
-                </div>
-                <div className="text-left">
-                  <p className="font-semibold">Friday</p>
-                </div>
-                <div className="text-right">
-                  <p>11:00 AM - 3:00 PM</p>
-                </div>
-                <div className="text-left">
-                  <p className="font-semibold">Saturday - Sunday</p>
-                </div>
-                <div className="text-right">
-                  <p>Closed</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 
