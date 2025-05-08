@@ -28,18 +28,18 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li className="flex items-center">
                 <MapPin className="h-5 w-5 mr-2 text-blue-400" />
-                <span className="text-gray-300">Kingston Engineering College, Vellore</span>
+                <span className="text-gray-300">University Campus, Building 3</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-blue-400" />
-                <a href="kannamal.engineering@kingston.ac" className="text-gray-300 hover:text-white transition-colors">
-                kannamal.engineering@kingston.ac
+                <a href="mailto:designthinking@university.edu" className="text-gray-300 hover:text-white transition-colors">
+                  designthinking@university.edu
                 </a>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 text-blue-400" />
                 <a href="tel:+1234567890" className="text-gray-300 hover:text-white transition-colors">
-                  9442420879
+                  (123) 456-7890
                 </a>
               </li>
             </ul>
