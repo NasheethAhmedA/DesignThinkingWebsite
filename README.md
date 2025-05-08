@@ -25,6 +25,7 @@ design-thinking-club/
 │   │   │   └── JoinUs.tsx
 │   │   ├── App.tsx        # Main app component with routing
 │   │   ├── main.tsx       # Entry point
+│   │   ├── images.ts       # Image imports
 │   ├── package.json
 │   ├── index.html
 ├── .gitignore

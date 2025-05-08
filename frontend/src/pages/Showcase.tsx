@@ -1,6 +1,6 @@
 import React from 'react';
 import { PlusCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const Showcase: React.FC = () => {
     const completedProjects = [
@@ -57,14 +57,14 @@ const Showcase: React.FC = () => {
                         Ready to bring your ideas to life? Start your project with us today.
                     </p>
                     <div className="flex justify-center">
-                        <Link
-                        onClick={() => window.scrollTo(0, 700)}
-                            to="/contact"
+                        <HashLink
+                            to="/contact#SendMSG"
+                            smooth
                             className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
                         >
                             <PlusCircle className="w-5 h-5" />
                             Start a Project
-                        </Link>
+                        </HashLink>
                     </div>
                 </div>
             </section>

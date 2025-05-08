@@ -85,8 +85,8 @@ const Contact: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
+            <div id="SendMSG" className="bg-white p-8 rounded-lg shadow-md">
+              <h2  className="text-2xl font-bold mb-6">Send Us a Message</h2>
               
               {formSubmitted ? (
                 <div className="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-6" role="alert">
