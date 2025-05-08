@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Calendar, Clock, MapPin, ExternalLink } from "lucide-react";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { event_id_1, event_id_1_gallery1, event_id_1_gallery2, event_id_2, event_id_2_gallery1, event_id_2_gallery2 } from "../images";
 import ImageCarouselModal from "../components/ImageCarouselModal";
 
@@ -21,40 +21,26 @@ interface Event {
 const upcomingEvents: Event[] = [
   {
     id: 0,
-    title: "Design Thinking Workshop",
-    date: "June 15, 2025",
-    time: "2:00 PM - 5:00 PM",
-    location: "Innovation Lab, Building 3",
+    title: "Design Roots: Project Reviews",
+    date: "To be Disclosed",
+    time: "To be Disclosed",
+    location: "Kingston Engineering College",
     description:
       "Learn the fundamentals of design thinking methodology and apply it to solve real-world problems.",
     image:
-      "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    registrationLink: "#",
+      "https://images.pexels.com/photos/3194519/pexels-photo-3194519.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
     id: 0,
-    title: "Guest Speaker: Innovation in Healthcare",
-    date: "June 25, 2025",
-    time: "3:30 PM - 5:00 PM",
-    location: "Auditorium A, Main Campus",
+    title: "Smart Campus Hackathon",
+    date: "To be Disclosed",
+    time: "To be Disclosed",
+    location: "Kingston Engineering College",
     description:
-      "Join us for an inspiring talk by Dr. Emily Chen on how design thinking is transforming healthcare.",
+      "Join us for a hackathon where students will work in teams to develop innovative solutions for a smarter campus.",
     image:
-      "https://images.pexels.com/photos/7176026/pexels-photo-7176026.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    registrationLink: "#",
-  },
-  {
-    id: 0,
-    title: "Innovation Challenge Kickoff",
-    date: "July 5, 2025",
-    time: "10:00 AM - 12:00 PM",
-    location: "Conference Hall, Student Center",
-    description:
-      "The official launch of our annual innovation challenge. Learn about this year's theme and form your teams.",
-    image:
-      "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    registrationLink: "#",
-  },
+      "https://images.pexels.com/photos/27523128/pexels-photo-27523128/free-photo-of-smart-home-devices-mobile-phone-screen-mockup.jpeg?auto=compress&cs=tinysrgb&w=600",
+  }
 ];
 
 const pastEvents: Event[] = [
@@ -88,7 +74,7 @@ const EventCard: React.FC<{ event: Event }> = ({ event }) => {
   const [showGallery, setShowGallery] = useState(false);
 
   const handleCardClick = () => {
-    if (event.past && event.imageGallery?.length) {
+    if (event.imageGallery?.length) {
       setShowGallery(true);
     }
   };
@@ -174,7 +160,7 @@ const Events: React.FC = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12">Past Events</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {pastEvents.map((event) => (
               <EventCard key={event.id} event={event} />
             ))}
@@ -189,12 +175,13 @@ const Events: React.FC = () => {
             If you have an idea for an event related to design thinking or
             innovation, we'd love to hear from you.
           </p>
-          <Link
-            to="/contact"
+          <HashLink
+            to="/contact#SendMSG"
+            smooth
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-md transition-colors"
           >
             Contact Us
-          </Link>
+          </HashLink>
         </div>
       </section>
     </div>
