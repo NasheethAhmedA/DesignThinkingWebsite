@@ -24,7 +24,7 @@ const benefits = [
   {
     icon: <Calendar className="h-6 w-6" />,
     title: 'Workshops & Events',
-    description: 'Access to exclusive workshops, seminars, and events led by industry professionals and design thinking experts..'
+    description: 'Access to exclusive workshops, seminars, and events led by industry professionals and design thinking experts.'
   },
   {
     icon: <Users className="h-6 w-6" />,
