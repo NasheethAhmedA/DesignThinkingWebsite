@@ -112,31 +112,21 @@ const JoinUs: React.FC = () => {
             <h2 className="text-3xl font-bold mb-8 text-center">How to Join</h2>
             <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="mb-8">
-                <h3 className="text-xl font-semibold mb-4">1. Attend an Info Session</h3>
+                <h3 className="text-xl font-semibold mb-4">1. Send Us a Message</h3>
                 <p className="text-gray-600">
-                  Join one of our weekly information sessions to learn more about the club, meet current members, 
-                  and understand how you can contribute to our community.
+                  Interested in joining? Just click the “Apply Now” button below and send us a message requesting membership. It's quick and easy!
                 </p>
               </div>
               <div className="mb-8">
-                <h3 className="text-xl font-semibold mb-4">2. Complete the Application</h3>
+                <h3 className="text-xl font-semibold mb-4">2. Start as a Member</h3>
                 <p className="text-gray-600">
-                  Fill out our application form sharing your interests, experience, and how you'd like to 
-                  contribute to the club's mission.
+                  Once we receive your request, you’ll be added as a club member. Begin participating in meetings, activities, and contributing to projects.
                 </p>
               </div>
               <div className="mb-8">
-                <h3 className="text-xl font-semibold mb-4">3. Interview</h3>
+                <h3 className="text-xl font-semibold mb-4">3. Grow into a Co-ordinator</h3>
                 <p className="text-gray-600">
-                  Have a brief chat with our club leaders to discuss your interests and potential roles 
-                  within the club.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-4">4. Get Involved</h3>
-                <p className="text-gray-600">
-                  Once accepted, start attending meetings, participating in projects, and becoming an active 
-                  member of our community!
+                  Active members who consistently contribute and show leadership may be promoted to the role of Co-ordinator within the club.
                 </p>
               </div>
             </div>
