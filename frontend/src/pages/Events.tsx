@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Calendar, Clock, MapPin, ExternalLink } from "lucide-react";
 import { HashLink } from "react-router-hash-link";
-import { event_id_1, event_id_1_gallery1, event_id_1_gallery2, event_id_2, event_id_2_gallery1, event_id_2_gallery2 } from "../images";
+import { event_id_1, event_id_1_gallery1, event_id_1_gallery2, event_id_2, event_id_2_gallery1, event_id_2_gallery2, event_id_3, event_id_3_gallery1, event_id_3_gallery2 } from "../images";
 import ImageCarouselModal from "../components/ImageCarouselModal";
 
 interface Event {
@@ -20,18 +20,7 @@ interface Event {
 
 const upcomingEvents: Event[] = [
   {
-    id: 0,
-    title: "Design Roots: Project Reviews",
-    date: "To be Disclosed",
-    time: "To be Disclosed",
-    location: "Kingston Engineering College",
-    description:
-      "Learn the fundamentals of design thinking methodology and apply it to solve real-world problems.",
-    image:
-      "https://images.pexels.com/photos/3194519/pexels-photo-3194519.jpeg?auto=compress&cs=tinysrgb&w=600",
-  },
-  {
-    id: 0,
+    id: 4,
     title: "Smart Campus Hackathon",
     date: "To be Disclosed",
     time: "To be Disclosed",
@@ -44,6 +33,18 @@ const upcomingEvents: Event[] = [
 ];
 
 const pastEvents: Event[] = [
+  {
+    id: 3,
+    title: "Ideathon: Alumni Review",
+    date: "May 10, 2025",
+    time: "To be Disclosed",
+    location: "Anna Hall, Main Block",
+    past: true,
+    description:
+      "An ideathon where students present their innovative ideas to alumni for feedback and mentorship.",
+    image: event_id_3,
+    imageGallery: [ event_id_3, event_id_3_gallery1, event_id_3_gallery2 ],
+  },
   {
     id: 2,
     title: "The Mic is Yours!",
