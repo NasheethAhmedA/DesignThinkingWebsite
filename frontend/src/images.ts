@@ -15,3 +15,6 @@ export {default as event_id_1_gallery2} from '/assets/event_id_1_gallery2.jpeg';
 export {default as event_id_2} from '/assets/event_id_2.jpeg';
 export {default as event_id_2_gallery1} from '/assets/event_id_2_gallery1.jpeg';
 export {default as event_id_2_gallery2} from '/assets/event_id_2_gallery2.jpeg';
+export {default as event_id_3} from '/assets/event_id_3.jfif';
+export {default as event_id_3_gallery1} from '/assets/event_id_3_gallery1.jfif';
+export {default as event_id_3_gallery2} from '/assets/event_id_3_gallery2.jfif';
