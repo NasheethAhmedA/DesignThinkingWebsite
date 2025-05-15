@@ -77,7 +77,7 @@ const Contact = () => {
       </div>
 
       {/* Form Section */}
-      <div className="max-w-4xl mx-auto mt-12 px-6 mb-20">
+      <div id="SendMSG" className="max-w-4xl mx-auto mt-12 px-6 mb-20">
         <div className="bg-white shadow-md rounded-lg p-8">
           <h3 className="text-xl font-semibold mb-6">Send Us a Message</h3>
           <form onSubmit={handleSubmit} className="space-y-5">

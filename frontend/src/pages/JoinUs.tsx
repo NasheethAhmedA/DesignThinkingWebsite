@@ -1,6 +1,6 @@
 import React from 'react';
 import { Calendar, Users, Lightbulb, Award } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 interface BenefitProps {
   icon: React.ReactNode;
@@ -150,12 +150,13 @@ const JoinUs: React.FC = () => {
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Join our community of innovators and help shape the future through design thinking.
           </p>
-          <Link 
-            to="/contact" 
+          <HashLink
+            to="/contact#SendMSG" 
+            smooth
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-md hover:bg-gray-100 transition-colors"
           >
             Apply Now
-          </Link>
+          </HashLink>
         </div>
       </section>
     </div>
