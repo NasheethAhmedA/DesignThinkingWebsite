@@ -41,7 +41,7 @@ const pastEvents: Event[] = [
     location: "Anna Hall, Main Block",
     past: true,
     description:
-      "Learn the fundamentals of design thinking methodology and apply it to solve real-world problems.",
+      "An ideathon where students present their innovative ideas to alumni for feedback and mentorship.",
     image: event_id_3,
     imageGallery: [ event_id_3, event_id_3_gallery1, event_id_3_gallery2 ],
   },
