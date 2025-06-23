@@ -38,7 +38,7 @@ const quickLinks = [
     link: '/events#UpcomingEvents'
   },
   {
-    title: 'Abouentst Us',
+    title: 'About Us',
     description: 'Learn about our mission and vision.',
     icon: <Users className="h-8 w-8 text-orange-500" />,
     link: '/about#AboutUs'
