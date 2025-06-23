@@ -1,24 +1,24 @@
 import React from 'react';
 import Carousel from '../components/Carousel';
 import { ArrowRight, Calendar, Users, Lightbulb, BookOpen } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 const carouselSlides = [
   {
     id: 1,
-    title: 'Design Thinking Workshop',
-    description: 'Join our upcoming workshop to learn the fundamentals of design thinking methodology.',
+    title: 'Participate in Our Events',
+    description: 'Join us for exciting workshops, seminars, and hackathons designed to enhance your design thinking skills.',
     image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     buttonText: 'Register Now',
-    buttonLink: '/events'
+    buttonLink: '/events#UpcomingEvents'
   },
   {
     id: 2,
-    title: 'Innovation Challenge 2025',
-    description: 'Participate in our annual innovation challenge and win exciting prizes.',
+    title: 'Collaborate For Projects',
+    description: 'Collaborate with peers on innovative projects and showcase your skills.',
     image: 'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     buttonText: 'Learn More',
-    buttonLink: '/events'
+    buttonLink: '/showcase#ShowCase'
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const carouselSlides = [
     description: 'Become a member of our vibrant community of design thinkers and innovators.',
     image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     buttonText: 'Join Now',
-    buttonLink: '/join-us'
+    buttonLink: '/join-us#WhyJoinUs'
   }
 ];
 
@@ -35,19 +35,19 @@ const quickLinks = [
     title: 'Upcoming Events',
     description: 'Check out our upcoming workshops and seminars.',
     icon: <Calendar className="h-8 w-8 text-blue-600" />,
-    link: '/events'
+    link: '/events#UpcomingEvents'
   },
   {
-    title: 'About Us',
+    title: 'Abouentst Us',
     description: 'Learn about our mission and vision.',
     icon: <Users className="h-8 w-8 text-orange-500" />,
-    link: '/about'
+    link: '/about#AboutUs'
   },
   {
     title: 'Our Approach',
     description: 'Discover our unique design thinking methodology.',
     icon: <Lightbulb className="h-8 w-8 text-green-500" />,
-    link: '/about'
+    link: '/about#OurApproach'
   },
   {
     title: 'Projects',
@@ -73,13 +73,14 @@ const Home: React.FC = () => {
               principles to tackle complex challenges. Our club provides a platform for students to learn, 
               collaborate, and develop creative solutions.
             </p>
-            <Link 
-              to="/about" 
+            <HashLink
+              to="/about#AboutUs" 
+              smooth
               className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors"
             >
               Learn more about us
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            </HashLink>
           </div>
         </div>
       </section>
@@ -89,9 +90,10 @@ const Home: React.FC = () => {
           <h2 className="text-3xl font-bold text-center mb-12">Quick Links</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {quickLinks.map((link, index) => (
-              <Link 
+              <HashLink 
                 key={index} 
                 to={link.link} 
+                smooth
                 className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow group"
               >
                 <div className="mb-4">{link.icon}</div>
@@ -101,7 +103,7 @@ const Home: React.FC = () => {
                   <span>Explore</span>
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </div>
-              </Link>
+              </HashLink>
             ))}
           </div>
         </div>
@@ -113,12 +115,13 @@ const Home: React.FC = () => {
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Become a part of our creative community and start your journey in design thinking today.
           </p>
-          <Link 
-            to="/join-us" 
+          <HashLink 
+            to="/join-us#WhyJoinUs" 
+            smooth
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-md hover:bg-gray-100 transition-colors"
           >
             Join Now
-          </Link>
+          </HashLink>
         </div>
       </section>
     </div>

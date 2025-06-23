@@ -20,19 +20,21 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+    const ScriptURL = "https://script.google.com/macros/s/AKfycbxSgs6C_2OiKa_kKGsvwmJ4MQGK626jwIv4zwCaLqffafrzLRqOCV1HsL3K4GERdtgk4g/exec";
+
     e.preventDefault();
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
+      const response = await fetch(ScriptURL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData as Record<string, string>).toString()
       });
 
       if (response.ok) {
-        setFormSubmitted(true);
-        setFormData({ name: '', email: '', subject: '', message: '' });
+      setFormSubmitted(true);
+      setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
-        alert('Failed to send message.');
+      alert('Failed to send message.');
       }
     } catch (error) {
       console.error(error);
@@ -110,8 +112,12 @@ const Contact = () => {
             >
               <option value="">Please select</option>
               <option value="General Inquiry">General Inquiry</option>
-              <option value="Partnership">Partnership</option>
+              <option value="Membership">Membership</option>
+              <option value="Project">Project</option>
+              <option value="EventProposal">Event Proposal</option>
+              <option value="Complaint">Complaint</option>
               <option value="Feedback">Feedback</option>
+              <option value="Other">Other</option>
             </select>
             <textarea
               name="message"

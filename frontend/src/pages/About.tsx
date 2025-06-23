@@ -1,28 +1,37 @@
 import React from 'react';
 import { Users, Target, Award, TrendingUp } from 'lucide-react';
+import { AvatarImage } from '../images';
 
 const About: React.FC = () => {
   const teamMembers = [
     {
-      name: 'Alex Johnson',
+      name: 'Divya Elumalai',
       role: 'Club President',
-      image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      image: AvatarImage // Placeholder image, replace with actual image URL
     },
     {
-      name: 'Sarah Chen',
+      name: 'Nasheeth Ahmed',
       role: 'Vice President',
-      image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      image: AvatarImage // Placeholder image, replace with actual image URL
     },
-    {
-      name: 'Michael Rivera',
-      role: 'Events Coordinator',
-      image: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-    },
-    {
-      name: 'Emily Williams',
-      role: 'Secretary',
-      image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-    }
+    { name: 'Abinaya A', role: 'coordinator', image: AvatarImage },
+  { name: 'Bushra Jabeen I', role: 'coordinator', image: AvatarImage },
+  { name: 'Harsh Kumar Dubey M', role: 'coordinator', image: AvatarImage },
+  { name: 'Hepsibah Charlotte R', role: 'coordinator', image: AvatarImage },
+  { name: 'Janani A', role: 'coordinator', image: AvatarImage },
+  { name: 'Lokeshwaran B', role: 'coordinator', image: AvatarImage },
+  { name: 'Saara Zakir', role: 'coordinator', image: AvatarImage },
+  { name: 'Saranya', role: 'coordinator', image: AvatarImage },
+  { name: 'Hemalatha. S', role: 'coordinator', image: AvatarImage },
+  { name: 'Janani N', role: 'coordinator', image: AvatarImage },
+  { name: 'Shalini', role: 'coordinator', image: AvatarImage },
+  { name: 'Thirumalai Vasan', role: 'coordinator', image: AvatarImage },
+  { name: 'Sanjeev', role: 'coordinator', image: AvatarImage },
+  { name: 'Udhai', role: 'coordinator', image: AvatarImage },
+  { name: 'Hamsavahini', role: 'coordinator', image: AvatarImage },
+  { name: 'Keerthana', role: 'coordinator', image: AvatarImage },
+  { name: 'Pooja', role: 'coordinator', image: AvatarImage }
+    
   ];
 
   const values = [
@@ -52,7 +61,7 @@ const About: React.FC = () => {
     <div>
       <section className="py-20 bg-blue-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-6">About Design Thinking Club</h1>
+          <h1 className="text-4xl font-bold mb-6" id='AboutUs'>About Design Thinking Club</h1>
           <p className="text-xl max-w-3xl mx-auto">
             We're a community of innovators dedicated to solving complex problems through design thinking methodologies.
           </p>
@@ -96,7 +105,7 @@ const About: React.FC = () => {
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Team</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Our Coordinators</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
               <div key={index} className="text-center">
@@ -117,7 +126,7 @@ const About: React.FC = () => {
 
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Our Approach</h2>
+          <h2 className="text-3xl font-bold mb-6" id='OurApproach'>Our Approach</h2>
           <p className="text-lg max-w-3xl mx-auto mb-12">
             We follow the five-stage design thinking process:
           </p>

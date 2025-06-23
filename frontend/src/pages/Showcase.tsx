@@ -3,23 +3,27 @@ import { PlusCircle } from 'lucide-react';
 import { HashLink } from 'react-router-hash-link';
 
 const Showcase: React.FC = () => {
-    const completedProjects = [
-        { id: 1, title: 'Project Alpha', description: 'A completed project about AI solutions.' },
-        { id: 2, title: 'Project Beta', description: 'A completed project about web development.' },
-    ];
+    // const completedProjects = [
+    //     { id: 1, title: 'Project Alpha', description: 'A completed project about AI solutions.' },
+    //     { id: 2, title: 'Project Beta', description: 'A completed project about web development.' },
+    // ];
 
     const ongoingProjects = [
-        { id: 1, title: 'Project Gamma', description: 'An ongoing project about mobile apps.' },
-        { id: 2, title: 'Project Delta', description: 'An ongoing project about cloud computing.' },
-    ];
+    { id: 1, title: 'AI Shadow Assistant', description: 'An AI-powered holographic assistant for accident detection and emergency alert systems.' },
+    { id: 2, title: 'Smart Plant Watering System', description: 'An automated irrigation system that monitors soil moisture to efficiently water plants.' },
+    { id: 3, title: 'Digital Healthcare Consulting Platform', description: 'A digital platform providing healthcare consultations and remote medical support.' },
+    { id: 4, title: 'Voice-Based Email Assistance', description: 'A system enabling users to send and manage emails using voice commands.' },
+    { id: 5, title: 'Home Automation Using Arduino', description: 'A home automation solution built with Arduino to control appliances remotely.' }
+];
+
 
     return (
         <div>
             <section className="py-20 bg-blue-700 text-white">
                 <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-4xl font-bold mb-6">Showcase</h1>
+                    <h1 className="text-4xl font-bold mb-6" id='ShowCase'>Showcase</h1>
                     <p className="text-xl max-w-3xl mx-auto">
-                        Explore our completed and ongoing projects, and start your own journey with us.
+                        Explore our ongoing projects, and start your own journey with us.
                     </p>
                 </div>
             </section>
@@ -27,7 +31,9 @@ const Showcase: React.FC = () => {
             <section className="py-16">
                 <div className="container mx-auto px-4">
                     <div className="max-w-5xl mx-auto">
-                        <h2 className="text-3xl font-bold mb-8 text-center">Completed Projects</h2>
+
+                        {/* Uncomment the following section if you want to display completed projects */}
+                        {/* <h2 className="text-3xl font-bold mb-8 text-center">Completed Projects</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                             {completedProjects.map((project) => (
                                 <div key={project.id} className="bg-white p-6 rounded-lg shadow-md text-center">
@@ -35,7 +41,7 @@ const Showcase: React.FC = () => {
                                     <p className="text-gray-600">{project.description}</p>
                                 </div>
                             ))}
-                        </div>
+                        </div> */}
 
                         <h2 className="text-3xl font-bold mb-8 text-center">Ongoing Projects</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

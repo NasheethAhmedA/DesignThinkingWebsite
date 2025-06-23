@@ -77,7 +77,7 @@ const JoinUs: React.FC = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-12 text-center">Why Join Us?</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center" id='WhyJoinUs'>Why Join Us?</h2>
             <div className="space-y-8">
               {benefits.map((benefit, index) => (
                 <Benefit 
