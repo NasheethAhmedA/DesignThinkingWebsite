@@ -32,14 +32,14 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-blue-400" />
-                <a href="mailto:<kannammal.engineering@kingston.ac.in>" className="text-gray-300 hover:text-white transition-colors">
-                kannammal.engineering@kingston.ac.in
+                <a href="mailto:designthinkingclub@kingston.ac.in" className="text-gray-300 hover:text-white transition-colors">
+                  designthinkingclub@kingston.ac.in
                 </a>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 text-blue-400" />
-                <a href="tel:+1234567890" className="text-gray-300 hover:text-white transition-colors">
-                  9442420879
+                <a href="tel:+9104162298300" className="text-gray-300 hover:text-white transition-colors">
+                  +91 04162298300
                 </a>
               </li>
             </ul>

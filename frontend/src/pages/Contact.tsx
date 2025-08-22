@@ -55,7 +55,7 @@ const Contact = () => {
         <div className="bg-white shadow-md rounded-lg p-6 text-center">
           <Mail className="mx-auto text-blue-600 mb-2" size={32} />
           <h4 className="font-semibold">Email</h4>
-          <a href="mailto:<kannammal.engineering@kingston.ac.in>" className="text-blue-600 text-sm hover:underline">kannammal.engineering@kingston.ac.in</a>
+          <a href="mailto:designthinkingclub@kingston.ac.in" className="text-blue-600 text-sm hover:underline">designthinkingclub@kingston.ac.in</a>
         </div>
         <div className="bg-white shadow-md rounded-lg p-6 text-center">
           <Linkedin className="mx-auto text-blue-600 mb-2" size={32} />
