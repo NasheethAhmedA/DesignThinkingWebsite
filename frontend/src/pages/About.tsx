@@ -1,38 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Users, Target, Award, TrendingUp } from 'lucide-react';
 import { AvatarImage } from '../images';
+import { HashLink } from 'react-router-hash-link';
 
 const About: React.FC = () => {
-  const teamMembers = [
-    {
-      name: 'Divya Elumalai',
-      role: 'Club President',
-      image: AvatarImage // Placeholder image, replace with actual image URL
-    },
-    {
-      name: 'Nasheeth Ahmed',
-      role: 'Vice President',
-      image: AvatarImage // Placeholder image, replace with actual image URL
-    },
-    { name: 'Abinaya A', role: 'coordinator', image: AvatarImage },
-  { name: 'Bushra Jabeen I', role: 'coordinator', image: AvatarImage },
-  { name: 'Harsh Kumar Dubey M', role: 'coordinator', image: AvatarImage },
-  { name: 'Hepsibah Charlotte R', role: 'coordinator', image: AvatarImage },
-  { name: 'Janani A', role: 'coordinator', image: AvatarImage },
-  { name: 'Lokeshwaran B', role: 'coordinator', image: AvatarImage },
-  { name: 'Saara Zakir', role: 'coordinator', image: AvatarImage },
-  { name: 'Saranya', role: 'coordinator', image: AvatarImage },
-  { name: 'Hemalatha. S', role: 'coordinator', image: AvatarImage },
-  { name: 'Janani N', role: 'coordinator', image: AvatarImage },
-  { name: 'Shalini', role: 'coordinator', image: AvatarImage },
-  { name: 'Thirumalai Vasan', role: 'coordinator', image: AvatarImage },
-  { name: 'Sanjeev', role: 'coordinator', image: AvatarImage },
-  { name: 'Udhai', role: 'coordinator', image: AvatarImage },
-  { name: 'Hamsavahini', role: 'coordinator', image: AvatarImage },
-  { name: 'Keerthana', role: 'coordinator', image: AvatarImage },
-  { name: 'Pooja', role: 'coordinator', image: AvatarImage }
-    
-  ];
+
 
   const values = [
     {
@@ -73,15 +46,15 @@ const About: React.FC = () => {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              The Design Thinking Club is dedicated to fostering a culture of innovation and creative problem-solving 
-              among students through the principles and methodologies of design thinking. We aim to equip our members 
+              The Design Thinking Club is dedicated to fostering a culture of innovation and creative problem-solving
+              among students through the principles and methodologies of design thinking. We aim to equip our members
               with the skills, mindsets, and tools needed to address complex challenges and create meaningful solutions.
             </p>
-            
+
             <h2 className="text-3xl font-bold mb-6">Our Vision</h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              We envision a community where design thinking becomes a natural approach to problem-solving, where 
-              students from diverse disciplines collaborate to tackle real-world challenges, and where innovation 
+              We envision a community where design thinking becomes a natural approach to problem-solving, where
+              students from diverse disciplines collaborate to tackle real-world challenges, and where innovation
               thrives through empathy, experimentation, and continuous learning.
             </p>
           </div>
@@ -106,23 +79,18 @@ const About: React.FC = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Our Coordinators</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="text-center">
-                <div className="mb-4 relative overflow-hidden rounded-lg">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="w-full aspect-square object-cover transition-transform hover:scale-105"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold">{member.name}</h3>
-                <p className="text-blue-600">{member.role}</p>
-              </div>
-            ))}
+          <div className="flex justify-center flex-col items-center gap-4">
+            <HashLink
+              smooth
+              to="/batch/2026#Batch2026"
+              className="text-xl font-semibold text-blue-600 hover:text-blue-800 hover:underline bg-blue-50 px-8 py-4 rounded-lg shadow-sm hover:shadow-md transition-all"
+            >
+              2026 Batch
+            </HashLink>
           </div>
         </div>
       </section>
+
 
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center">

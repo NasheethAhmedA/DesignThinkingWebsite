@@ -25,16 +25,16 @@ const Contact = () => {
     e.preventDefault();
     try {
       const response = await fetch(ScriptURL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData as Record<string, string>).toString()
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as Record<string, string>).toString()
       });
 
       if (response.ok) {
-      setFormSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
+        setFormSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
-      alert('Failed to send message.');
+        alert('Failed to send message.');
       }
     } catch (error) {
       console.error(error);
